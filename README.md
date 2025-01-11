@@ -41,7 +41,7 @@ Response:
     "24hchange": 2.5
 }
 ```
-##2. Automatic Updates
+## 2. Automatic Updates
 
 The system automatically fetches and updates prices for Bitcoin, Ethereum, and Matic Network every 2 hours. This is handled by a scheduled task in `cryptoControllers.js`. The update process includes:
 - Fetching current prices from CoinGecko API
