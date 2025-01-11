@@ -23,8 +23,7 @@
 
 ## Live API
    Base URL: https://backend-task-omega.vercel.app
-# Available Endpoints:
-
+### Available Endpoints:
   -Get Bitcoin Stats: https://backend-task-omega.vercel.app/stats?coin=bitcoin
   -Calculate Deviation: https://backend-task-omega.vercel.app/deviation
   -Manual Updates: https://backend-task-omega.vercel.app/updateDetails
