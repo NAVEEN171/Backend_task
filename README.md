@@ -114,12 +114,12 @@ Response:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/crypto-tracking-api.git
+git clone https://github.com/NAVEEN171/Backend_task
 ```
 
 2. Install dependencies
 ```bash
-cd crypto-tracking-api
+
 npm install
 ```
 
