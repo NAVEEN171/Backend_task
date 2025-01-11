@@ -1,6 +1,4 @@
-# Cryptocurrency Price Tracking API
-
-A Node.js API that tracks and manages cryptocurrency price data using the CoinGecko API. The service automatically updates prices every 2 hours and provides endpoints for manual updates, price statistics, and price deviation calculations.
+# BackendAssignment
 
 ## Features
 
@@ -23,9 +21,24 @@ A Node.js API that tracks and manages cryptocurrency price data using the CoinGe
 └── .env
 ```
 
+Live API
+Base URL: [https://backend-task-omega.vercel.app/](https://backend-task-omega.vercel.app/)
+For example:
+
+Get Bitcoin Stats: https://backend-task-omega.vercel.app/stats?coin=bitcoin
+Calculate Deviation: https://backend-task-omega.vercel.app/deviation
+Manual updates: https://backend-task-omega.vercel.app/updateDetails
+
 ## API Endpoints
 
-### 1. Get Coin Statistics
+## 1. Automatic Updates (Task-1)
+
+The system automatically fetches and updates prices for Bitcoin, Ethereum, and Matic Network every 2 hours. This is handled by a scheduled task in `cryptoControllers.js`. The update process includes:
+- Fetching current prices from CoinGecko API
+- Updating existing records in MongoDB
+- Creating new records for new cryptocurrencies
+
+### 2. Get Coin Statistics (Task-2)
 ```
 GET /stats
 ```
@@ -41,15 +54,27 @@ Response:
     "24hchange": 2.5
 }
 ```
-## 2. Automatic Updates
 
-The system automatically fetches and updates prices for Bitcoin, Ethereum, and Matic Network every 2 hours. This is handled by a scheduled task in `cryptoControllers.js`. The update process includes:
-- Fetching current prices from CoinGecko API
-- Updating existing records in MongoDB
-- Creating new records for new cryptocurrencies
+### 3. Calculate Price Deviation (Task-3)
+```
+GET /deviation 
+```
+Returns the standard deviation of prices based on the last 100 records.
+
+Response:
+```json
+{
+    "deviation": "1234.56"
+}
+```
 
 
-### 2. Manual Update Coin Details
+
+```
+
+
+
+### 4. Manual Update Coin Details
 ```
 POST /updateDetails
 ```
@@ -84,22 +109,7 @@ Response:
 
 ```
 
-### 3. Calculate Price Deviation
-```
-GET /deviation
-```
-Returns the standard deviation of prices based on the last 100 records.
 
-Response:
-```json
-{
-    "deviation": "1234.56"
-}
-```
-
-
-
-```
 
 ## Installation
 
