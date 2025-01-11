@@ -22,12 +22,12 @@
 ```
 
 Live API
-Base URL: [https://backend-task-omega.vercel.app/](https://backend-task-omega.vercel.app/)
-For example:
+Base URL: https://backend-task-omega.vercel.app
+Available Endpoints:
 
--Get Bitcoin Stats: https://backend-task-omega.vercel.app/stats?coin=bitcoin
--Calculate Deviation: https://backend-task-omega.vercel.app/deviation
--Manual updates: https://backend-task-omega.vercel.app/updateDetails
+Get Bitcoin Stats: https://backend-task-omega.vercel.app/stats?coin=bitcoin
+Calculate Deviation: https://backend-task-omega.vercel.app/deviation
+Manual Updates: https://backend-task-omega.vercel.app/updateDetails
 
 ## API Endpoints
 
